@@ -6,3 +6,4 @@ sealed trait SharedError2 {
 
 case class InvalidUUIDError2(description: String)  extends SharedError2
 
+object SharedError2 // does not help
