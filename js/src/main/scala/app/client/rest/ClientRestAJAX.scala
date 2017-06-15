@@ -13,7 +13,13 @@ object ClientRestAJAX2 {
     import io.circe._
     import io.circe.generic.auto._
     import io.circe.parser._
-    decode[SharedError2](x)
+    import io.circe._, io.circe.generic.semiauto._
+
+
+//    implicit val fooDecoder: Decoder[SharedError2] = deriveDecoder[SharedError2]
+
+    import SharedError2.fooDecoder
+    decode[SharedError2](x)(SharedError2.fooDecoder)
     ???
   }
 }
