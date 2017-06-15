@@ -1,11 +1,10 @@
 package app.shared
+import io.circe._, io.circe.generic.semiauto._
 
 sealed trait SharedError2 {
   val description: String
 }
 
-
-import io.circe._, io.circe.generic.semiauto._
 
 case class InvalidUUIDError2(description: String)  extends SharedError2
 

@@ -5,7 +5,6 @@ import app.shared.{SharedError2}
 
 object ClientRestAJAX3 {
 
-
   def getEntity() {
     val x = "bla"
     import io.circe._
